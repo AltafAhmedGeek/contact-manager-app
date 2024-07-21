@@ -83,7 +83,7 @@ const deleteContact = asyncHandler(async (req, res) => {
     res.status(constants.NOT_FOUND);
     throw new Error("Contact not found. ");
   }
-  await Contact.remove();
+  await contact.deleteOne();
   return res.status(200).json({
     status: true,
     message: `Contact Deleted Successfully, ID: ${req.params.id}`,
