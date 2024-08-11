@@ -27,7 +27,6 @@ const errorHandler = (err, req, res, next) => {
     status: false,
     message: err.message,
     stackTrace: err.stack,
-    
   });
 };
 
